@@ -1,0 +1,24 @@
+.connect {
+    height: 22px;
+    width: 22px;
+}
+
+ul {
+    li {
+        display: inline;
+        padding-right: 40px;
+        color: #1C3C34;
+    }
+
+    li:hover {
+        color: #0033FF;
+    }
+}
+
+.footer-container {
+    display: flex;
+    font-size: 14px;
+    padding-top: 25px;
+    padding-right: 83px;
+    padding-left: 86px;
+}

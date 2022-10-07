@@ -1,0 +1,8 @@
+<image-cropper [imageChangedEvent]="data" [maintainAspectRatio]="false" [aspectRatio]="4 / 3" [resizeToWidth]="256"
+    [onlyScaleDown]="true" [roundCropper]="false" [alignImage]="'left'" format="png"
+    (imageCropped)="imageCropped($event)"></image-cropper>
+
+<div style="text-align: center;">
+    <button mat-raised-button class="mr-3" color="primary" (click)="setCroppedImage()">Done</button>
+    <button mat-raised-button color="warn" (click)="onNoClick()">Cancel</button>
+</div>

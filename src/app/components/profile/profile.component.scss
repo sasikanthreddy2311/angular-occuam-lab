@@ -1,0 +1,75 @@
+.profile-container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40%;
+    height: 100%;
+}
+
+.profile {
+    width: 100px;
+    height: 100px;
+    border: 1px solid lightgrey;
+}
+
+.actionBtn {
+    display: block;
+    color: #0033FF !important;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.saveBtn {
+    background-color: #0033FF;
+    color: white !important;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+.saveBtn:disabled {
+    background-color: #0033FF73;
+    cursor: not-allowed;
+}
+
+.info-layout {
+    padding-top: 26px;
+}
+
+.dark-font {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.light-font {
+    opacity: 0.8;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.upload-layout {
+    width: 200px;
+    height: 200px;
+    background: #F1F1F1;
+    border-radius: 100px;
+    position: relative;
+}
+
+.upload-text {
+    position: absolute;
+    top: 92px;
+    left: 30px;
+}
+
+.croppedImage {
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .profile-container {
+        padding-left: 5%;
+    }
+}

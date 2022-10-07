@@ -1,0 +1,47 @@
+<div class="profile-container">
+    <!-- Layout to show profile photo -->
+    <div *ngIf="!showEdit">
+        <img class="profile" [src]="displayedImage" alt="profile">
+        <a class="actionBtn" [routerLink]="" (click)="showEdit = !showEdit">edit</a>
+    </div>
+
+    <!-- Layout to edit profile photo -->
+    <div *ngIf="showEdit">
+        <div *ngIf="!croppedImage" class="upload-layout" (click)="upload()">
+            <span class="upload-text">Drop your image here.</span>
+        </div>
+        <input type="file" (change)="fileChangeEvent($event)" #fileInput id="profileInput" style="display:none"
+        accept="image/png, image/gif, image/jpeg" />
+        <img *ngIf="croppedImage" class="croppedImage" [src]="croppedImage" [style.border]="croppedImage ? '1px solid black' : 'none'" (click)="upload()"/>
+        <p class="light-font" style="width: 375px;">
+            To replace an existing profile photo, delete it and upload a new photo. Click Save after to update your
+            profile.<br><br>
+            Supported file format: JPG; Maximum file size: 2MB
+        </p>
+        <div style="display: flex;padding-top: 22px;align-items: center;">
+            <span class="actionBtn mr-4" (click)="cancelUpload()">Cancel</span>
+            <button class="actionBtn saveBtn" [disabled]="!showEdit" (click)="saveUpload()">Save</button>
+        </div>
+    </div>
+
+    <!-- Layout to show profile information -->
+    <div class="info-layout">
+        <p class="dark-font">Sarah Patricia Sarahson</p>
+        <p class="light-font">SVP, Occam Lab Pte Ltd</p>
+
+        <p class="dark-font" style="font-size: 18px;padding-top: 40px;">Account Settings</p>
+
+        <p class="light-font" style="padding-top: 16px;">Email Address</p>
+        <p class="dark-font">Sarah.Patricia@tlf.com</p>
+
+        <p class="light-font" style="padding-top: 32px;">Time Zone</p>
+        <p class="dark-font">(UTC+08:00) Kuala Lumpur, Singapore</p>
+        <a class="actionBtn" [routerLink]="">edit</a>
+
+        <p class="light-font" style="padding-top: 34px;">Visibility</p>
+        <p class="dark-font" style="font-style: italic;">You are currently not visible to other attendees.</p>
+        <div>
+            <ui-switch [(ngModel)]="enable" size="small" color="black" defaultBgColor="#676767"></ui-switch>
+        </div>
+    </div>
+</div>

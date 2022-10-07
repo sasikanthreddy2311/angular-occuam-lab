@@ -1,0 +1,44 @@
+.logo {
+    width: 133px;
+    height: 35px;
+}
+
+.navbar-section {
+    margin-left: auto;
+    margin-right: 120px;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+    margin-left: auto;
+    margin-right: 120px;
+
+    ul {
+
+        align-items: center;
+        li {
+            a {
+                color: #1C3C34;
+                font-size: 14px;
+                padding: 0px 30px;
+            }
+            a:hover {
+                color: #0033FF;
+            }
+        }
+    }
+}
+
+.image-container {
+    margin-left: 84px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .navbar-collapse {
+        margin-right: 0px;
+    }
+
+    .image-container {
+        margin-left: 0px;
+    }
+}
