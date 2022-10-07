@@ -1,8 +1,0 @@
-{
-    "/echo": {
-        "target": "https://angular-occuam-lab.web.app/",
-        "secure": true,
-        "changeOrigin": true,
-        "logLevel": "debug"
-    }
-}

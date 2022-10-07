@@ -82,11 +82,7 @@
               "browserTarget": "angular-occuam-lab:build:development"
             }
           },
-          "defaultConfiguration": "development",
-          "options": {
-            "browserTarget": "angular-occuam-lab:build",
-            "proxyConfig": "src/proxy.config.json"
-          }
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
